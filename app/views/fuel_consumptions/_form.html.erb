@@ -1,0 +1,25 @@
+<%= form_for(@fuel_consumption) do |f| %>
+  <% if @fuel_consumption.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fuel_consumption.errors.count, "error") %> prohibited this fuel_consumption from being saved:</h2>
+
+      <ul>
+      <% @fuel_consumption.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :distance %><br>
+    <%= f.number_field :distance %>
+  </div>
+  <div class="field">
+    <%= f.label :fuel_amount %><br>
+    <%= f.number_field :fuel_amount %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

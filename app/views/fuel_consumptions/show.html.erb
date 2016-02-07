@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @fuel_consumption.distance %>
+</p>
+
+<p>
+  <strong>Fuel amount:</strong>
+  <%= @fuel_consumption.fuel_amount %>
+</p>
+
+<%= link_to 'Edit', edit_fuel_consumption_path(@fuel_consumption) %> |
+<%= link_to 'Back', fuel_consumptions_path %>
