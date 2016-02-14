@@ -9,6 +9,8 @@
   <strong>Fuel amount:</strong>
   <%= @fuel_consumption.fuel_amount %>
 </p>
-
+<%= react_component("FuelConsumptionCalculator",
+                    @hello_world_props,
+                    prerender: false) %>
 <%= link_to 'Edit', edit_fuel_consumption_path(@fuel_consumption) %> |
 <%= link_to 'Back', fuel_consumptions_path %>
